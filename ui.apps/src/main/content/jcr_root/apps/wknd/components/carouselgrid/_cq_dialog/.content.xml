@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Title"
+                        name="./title"/>
+                    <carouselOrGrid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Carousel of Grid Layout"
+                        name="./carouselOrGrid">
+                        <items jcr:primaryType="nt:unstructured">
+                            <grid jcr:primaryType="nt:unstructured"
+                                text="Grid"
+                                value="grid"/>
+                            <carousel jcr:primaryType="nt:unstructured"
+                                text="Carousel"
+                                value="carousel"/>
+                        </items>
+                    </carouselOrGrid>
+                    <columnNumber
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Number of Columns in Grid or Visible slides at once"
+                        name="./columnNumber">
+                        <items jcr:primaryType="nt:unstructured">
+                            <slides1 jcr:primaryType="nt:unstructured"
+                                text="1"
+                                value="1"/>
+                            <slides2 jcr:primaryType="nt:unstructured"
+                                text="2"
+                                value="2"/>
+                            <slides3 jcr:primaryType="nt:unstructured"
+                                text="3"
+                                value="3"/>
+                        </items>
+                    </columnNumber>
+                    <multi
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                            composite="{Boolean}true">
+                        <field
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                name="./carouselgridItems">
+                            <items jcr:primaryType="nt:unstructured">
+                                <carouselgridItemTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        fieldLabel="Carousel/Grid Item Title"
+                                        name="./carouselgridItemTitle"/>
+                            </items>
+                        </field>
+                    </multi>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

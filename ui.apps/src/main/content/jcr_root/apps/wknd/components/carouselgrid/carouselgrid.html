@@ -1,0 +1,31 @@
+<sly data-sly-use.coreTemplate="core/wcm/components/commons/v1/templates.html"> </sly>
+<div class="cmp-carouselgrid">
+	<h2>${properties.title}</h2>
+	<div class="carouselgrid-con ${properties.carouselOrGrid == 'carousel' ? 'carousel-con' : 'grid-con'}" data-columns="${properties.columnNumber}">
+		<!-- Slideshow container -->
+		<div class="slides-container">
+			<div class="mySlides fade" data-sly-repeat="${cgPage.carouselgridList}">
+				<div class="numbertext">1 / 9</div>
+				<div class="text">Caption ${itemList.index}</div>
+				<div data-sly-unwrap="${!wcmmode.edit}" data-sly-resource="${ 'container-{0}' @ resourceType='core/wcm/components/container/v1/container' }"></div>
+			</div>
+		</div>
+			
+		<!-- Next and previous buttons -->
+		<button class="prev">&#10094;</button>
+		<button class="next">&#10095;</button>
+		
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+			<button class="dot" data-slide-number="1"></button>
+			<button class="dot" data-slide-number="2"></button>
+			<button class="dot" data-slide-number="3"></button>
+			<button class="dot" data-slide-number="4"></button>
+			<button class="dot" data-slide-number="5"></button>
+			<button class="dot" data-slide-number="6"></button>
+			<button class="dot" data-slide-number="7"></button>
+			<button class="dot" data-slide-number="8"></button>
+			<button class="dot" data-slide-number="9"></button>
+		</div>
+	</div>
+</div>
